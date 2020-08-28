@@ -27,6 +27,7 @@ print(-1) if calList[m] == 10001 else print(calList[m])
 해설 :
 for i in range(n):
     for j in range(array[i], m + 1):
+반복순서가 n, m 이며
 range를 동전 금액부터 시작해서 위에 작성 코드 기준 coin <= i 검사가 필요 없음
 
 
