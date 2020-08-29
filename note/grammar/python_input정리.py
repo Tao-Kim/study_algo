@@ -13,3 +13,13 @@ s = input()
 # 1 1 1 1 일떄 : input().split()을 통해 ['1', '1', '1', '1'] -> map(int, 되는 방식
 # 11111 일떄 : input()을 통해 '11111'이 되고 iterable이므로 -> map(int, 되는 방식
 list(map(int, input())) 
+
+
+
+# 입력 받을 리스트의 갯수와 그 아래 리스트가 나오는 형태
+# 3
+# 1 1 0
+# 1 0 0
+# 0 0 0
+# 리스트 컴프리헨션 활용해서 한줄로 입력 가능
+inputList = [list(input().split()) for i in range(int(input()))]
