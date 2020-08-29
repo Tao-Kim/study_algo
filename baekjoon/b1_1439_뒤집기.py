@@ -1,3 +1,5 @@
+# == g23
+
 s = input()
 
 countZero = s.count("01")
