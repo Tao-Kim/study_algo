@@ -30,6 +30,40 @@ else:
     for index, distance in enumerate(distanceList):
         if distance == k:
             print(index)
+            
+            
+###############################################################
+
+from collections import deque
+INFINITY = 987654321
+n, m, k, x = map(int, input().split())
+graph = [[] for _ in range(n + 1)]
+
+for _ in range(m):
+    a, b = map(int, input().split())
+    graph[a].append(b)
+
+distanceList = [INFINITY] * (n+1)
+queue = deque()
+queue.append((x, 0))
+
+while queue:
+    current, distance = queue.popleft()
+
+    if distanceList[current] == INFINITY:
+        distanceList[current] = distance
+
+    if distance < k:
+        for city in graph[current]:
+            if distanceList[city] > distance + 1:
+                queue.append((city, distance + 1))
+
+if distanceList.count(k) == 0:
+    print(-1)
+else:
+    for index, value in enumerate(distanceList):
+        if value == k:
+            print(index)
 
 
 """
@@ -38,7 +72,7 @@ else:
 
 접근 :
 - 재귀를 이용하여 dfs로 풀었는데 bfs에 비해 상당히 비효율적인 것 같음
-
+    - 백준에 등록결과 시간초과 메모리초과가 발생해서 수정함
 
 다른 사람 풀이 :
 ========================================================================================
