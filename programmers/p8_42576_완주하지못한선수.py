@@ -22,11 +22,25 @@ def solution(participant, completion):
 
 다른 사람 풀이 :
 ========================================================================================
+Counter 이용
 
+import collections
+
+def solution(participant, completion):
+    answer = collections.Counter(participant) - collections.Counter(completion)
+    return list(answer.keys())[0]
 ========================================================================================
+Counter 이용2
+from collections import Counter
+def solution(participant, completion):
 
+    inter = list((Counter(participant) - Counter(completion)).elements())
+
+    return inter.pop()
+========================================================================================
 
 노트 :
 - https://dev.plusblog.co.kr/42 살펴보기
 - https://wiki.python.org/moin/TimeComplexity 살펴보기
+- 파이썬 Counter 찾아보기
 """
