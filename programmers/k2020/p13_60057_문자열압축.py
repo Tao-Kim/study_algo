@@ -53,6 +53,7 @@ def solution(s):
 """
 문제주소 : https://programmers.co.kr/learn/courses/30/lessons/60057
 시간 : 30:12
+테스트 : 28/28
 
 - 모든 경우를 코드로 풀어 구현함
 - 코드 가독성이 심각하게 떨어짐
