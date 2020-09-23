@@ -13,6 +13,9 @@ res4 = requests.post(URL, data=json.dumps(data))
 
 res5 = requests.get(URL, headers={'token': 'token'}, cookies={'cookie': 'cookey'})  # headers, cookies
 
+requests.post(uri, headers={'X-Auth-Token': token}, json={'commands': cmds}).json()
+requests.post(uri, headers={'X-Auth-Token': token}, data=json.dumps({'commands': cmds})).json()
+
 res.request # 내가 보낸 request 객체에 접근 가능
 res.status_code # 응답 코드
 res.text # body의 내용물을 text로 반환. encoding타입을 설정하는게 좋음
