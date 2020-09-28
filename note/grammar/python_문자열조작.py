@@ -14,7 +14,19 @@ s = "Apple and Banana"
 s = s.translate(translator)
 print(s) # "Apple 1nd B1n1n1" = 대소문자 구별
 
+'''
+특정 문자 제거
+'''
+s = "vjlkaf.jvl1.3/.,"
+t = {'.':None,'/':None,',':None}
+translator = str.maketrans(t)
+s = s.translate(translator)
+print(s)
 
+import re
+s = "vjlkaf.jvl1.3/.,\\()[]"
+s3 = re.sub('[.\\\\.,/()\[\]]', '', s)
+print(s3)
 
 """
 문자열 양쪽의 특정 문자 제거

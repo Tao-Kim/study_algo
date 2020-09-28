@@ -2,7 +2,7 @@
 n = int(input())
 
 # int 여러개 입력
-n, m = map(int, input().spli())
+n, m = map(int, input().split())
 
 # 문자열 입력 - 정확하게는 한줄 문자열 입력임
 s = input()
